@@ -19,7 +19,11 @@ I wrote this tool to solve the problem presented above. It uses the same idea th
 There are 2 modes, `config` and `fix`. The config mode serves as a Wizard of sorts to create the .ini configuration file the tool accepts.
 `fix` mode takes a configuration file and starts running the algorithm that takes pad input and converts it to key strokes.
 
-## Requirements
+## Compiling
+
+To compile this program, you can just run `make` on the root folder. If you want it to produce debug messages, then run `make debug` inside the `src/` directory.
+
+### Requirements
 
 I think all you need is to have a recent kernel, since the joystick and uinput modules aren't all that new (to my knowledge).
 
