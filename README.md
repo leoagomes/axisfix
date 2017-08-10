@@ -1,12 +1,12 @@
 # AxisFix
 
-This project tries to fix the axis problem found when using some PlayStation to USB converters to play games that use DDR (Dance Dance Revolution) mats. There is already a solution for Windows using AutoHotKey, but there is apparently none for Linux, and so I developed this code.
+This project tries to fix the axis problem found when using some PlayStation to USB converters to play games that use DDR (Dance Dance Revolution) mats. There is already a solution for Windows using AutoHotKey, but there is no simple alternative for Linux, and so I developed this code.
 
 ## The Problem
 
-Some PlayStation Controller ports to USB port converters have a problem where analog axis are reported when pressing d-pad buttons, and so when playing DDR-like games (StepMania, for instance) you come to the problem where you cant press two opposing directions at the same time, since an analog stick cant be facing to opposite directions at the same time.
+Some PlayStation Controller ports to USB port converters have a problem where analog axis are reported when pressing d-pad buttons, and so when playing DDR-like games (StepMania, for instance) you come to the problem where you can't press two opposing directions at the same time, since an analog stick cant be facing to opposite directions at the same time.
 
-## Available fixes
+## Available solutions
 
 On Windows, there is an AutoHotKey based solution which reads the axis position and based on small differences on the axis value, simulates keyboard input. This solution does not work correctly on Linux because AHK does not exist for Linux.
 
