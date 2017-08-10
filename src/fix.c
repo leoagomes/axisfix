@@ -49,7 +49,7 @@ void af_start_fix(char* inname) {
 	fclose(input);
 
 	// open the joystick for the pads
-	if (open_pads(pads, padc)) {
+	if (open_pads(pads, padc) == 0) {
 		release_pads(pads, padc);
 		return;
 	}
@@ -208,6 +208,8 @@ void process_pad_state(struct ddrpad* pad, keyboard* kbd) {
 			PAD_SET_RIGHT(pad);
 		else if (val == pad->hor_mid)
 			PAD_SET_LEFTRIGHT(pad);
+		else if (val == pad->hor_idle)
+			PAD_CLEAR_HORIZONTAL(pad);
 		else
 			dbg_printf("unknown horizontal axis value: %d\n", val);
 	} else if (axis == pad->vert_axis) {
@@ -217,6 +219,8 @@ void process_pad_state(struct ddrpad* pad, keyboard* kbd) {
 			PAD_SET_DOWN(pad);
 		else if (val == pad->vert_mid)
 			PAD_SET_UPDOWN(pad);
+		else if (val == pad->vert_idle)
+			PAD_CLEAR_VERTICAL(pad);
 		else
 			dbg_printf("unknown vertical axis value: %d\n", val);
 	} else {

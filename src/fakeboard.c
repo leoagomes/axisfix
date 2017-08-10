@@ -86,6 +86,8 @@ void af_keyboard_send(keyboard* kb, int key, int press) {
 	if (!kb)
 		return;
 
+	dbg_printf("Sending key %d %s\n", key, press ? "press" : "release");
+
 	emit(kb->fd, EV_KEY, key, press ? 1 : 0);
 	emit(kb->fd, EV_SYN, SYN_REPORT, 0);
 }
