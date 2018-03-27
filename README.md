@@ -1,16 +1,16 @@
 # AxisFix
 
-This project tries to fix the axis problem found when using some PlayStation to USB converters to play games that use DDR (Dance Dance Revolution) mats. There is already a solution for Windows using AutoHotKey, but there is no simple alternative for Linux, and so I developed this code.
+This project tries to fix the axis problem found when using some PlayStation to USB adapters to play games that use DDR (Dance Dance Revolution) mats. There is already a solution for Windows using AutoHotKey, but there appears to be no simple alternative for Linux.
 
 ## The Problem
 
-Some PlayStation Controller ports to USB port converters have a problem where analog axis are reported when pressing d-pad buttons, and so when playing DDR-like games (StepMania, for instance) you come to the problem where you can't press two opposing directions at the same time, since an analog stick cant be facing to opposite directions at the same time.
+Some DualShock to USB adapters have a problem where d-pad buttons are reported as analog axis, and so when playing DDR-like games (StepMania, for instance) you come to the problem where you can't press two opposing directions at the same time, as there is no way to do that on an analog stick.
 
 ## Available solutions
 
-On Windows, there is an AutoHotKey based solution which reads the axis position and based on small differences on the axis value, simulates keyboard input. This solution does not work correctly on Linux because AHK does not exist for Linux.
+On Windows, there is an AutoHotKey based solution which reads the axis position and based on small differences on the axis values, simulates keyboard input. AHK is not available for Linux, so this is not an option.
 
-There is a solution somewhere online for Linux which involves patchin the joystick kernel module (iirc) but doing that isn't really that intuitive.
+There is a solution somewhere online for Linux which involves patching the joystick kernel module (iirc) but doing that isn't really that intuitive and also relies on patching code that runs on kernel space.
 
 ## This tool
 
