@@ -7,7 +7,6 @@
 #include <errno.h>
 #include <unistd.h>
 #include <fcntl.h>
-#include <stropts.h>
 #include <sys/ioctl.h>
 
 #include <linux/input.h>
