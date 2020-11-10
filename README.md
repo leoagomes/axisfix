@@ -10,7 +10,7 @@ Some DualShock to USB adapters have a problem where d-pad buttons are reported a
 
 On Windows, there is an AutoHotKey based solution which reads the axis position and based on small differences on the axis values, simulates keyboard input. AHK is not available for Linux, so this is not an option.
 
-There is a solution somewhere online for Linux which involves patching the joystick kernel module (iirc) but doing that isn't really that intuitive and also relies on patching code that runs on kernel space.
+There is a solution for Linux which involves patching the joystick kernel module (https://github.com/adiel-mittmann/dancepad) but doing that isn't really that intuitive and also relies on patching code that runs in kernel space.
 
 ## This tool
 
